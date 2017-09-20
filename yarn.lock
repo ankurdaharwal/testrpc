@@ -611,13 +611,13 @@ big.js@^3.1.3:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/big.js/-/big.js-3.1.3.tgz#4cada2193652eb3ca9ec8e55c9015669c9806978"
 
+bignumber.js@^4.0.2:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/bignumber.js/-/bignumber.js-4.0.4.tgz#7c40f5abcd2d6623ab7b99682ee7db81b11889a4"
+
 "bignumber.js@git+https://github.com/debris/bignumber.js#master":
   version "2.0.7"
   resolved "git+https://github.com/debris/bignumber.js#c7a38de919ed75e6fb6ba38051986e294b328df9"
-
-"bignumber.js@git+https://github.com/debris/bignumber.js.git#94d7146671b9719e00a09c29b01a691bc85048c2":
-  version "2.0.7"
-  resolved "git+https://github.com/debris/bignumber.js.git#94d7146671b9719e00a09c29b01a691bc85048c2"
 
 binary-extensions@^1.0.0:
   version "1.8.0"
@@ -627,13 +627,14 @@ bindings@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/bindings/-/bindings-1.2.1.tgz#14ad6113812d2d37d72e67b4cacb4bb726505f11"
 
-bip39@~2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/bip39/-/bip39-2.2.0.tgz#40e73f70674c267f148cdbf8374f2a50be166b0d"
+bip39@~2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/bip39/-/bip39-2.4.0.tgz#a0b8adbf163f53495f00f05d9ede7c25369ccf13"
   dependencies:
     create-hash "^1.1.0"
-    pbkdf2 "^3.0.0"
+    pbkdf2 "^3.0.9"
     randombytes "^2.0.1"
+    safe-buffer "^5.0.1"
     unorm "^1.3.3"
 
 bip66@^1.1.3:
@@ -1290,6 +1291,10 @@ ethereum-common@0.0.18, ethereum-common@^0.0.18:
   version "0.0.18"
   resolved "https://registry.yarnpkg.com/ethereum-common/-/ethereum-common-0.0.18.tgz#2fdc3576f232903358976eb39da783213ff9523f"
 
+ethereum-common@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/ethereum-common/-/ethereum-common-0.1.0.tgz#874dd0fae5e962a56c50ebf28efa6fe39492b0e7"
+
 ethereumjs-account@^2.0.3, ethereumjs-account@~2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/ethereumjs-account/-/ethereumjs-account-2.0.4.tgz#f8c30231bcb707f4514d8a052c1f9da103624d47"
@@ -1314,7 +1319,7 @@ ethereumjs-tx@^1.0.0, ethereumjs-tx@^1.2.0, ethereumjs-tx@^1.3.0:
     ethereum-common "^0.0.18"
     ethereumjs-util "^5.0.0"
 
-ethereumjs-util@^4.0.0, ethereumjs-util@^4.0.1, ethereumjs-util@^4.4.0:
+ethereumjs-util@4.5.0, ethereumjs-util@^4.0.0, ethereumjs-util@^4.0.1, ethereumjs-util@^4.4.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/ethereumjs-util/-/ethereumjs-util-4.5.0.tgz#3e9428b317eebda3d7260d854fddda954b1f1bc6"
   dependencies:
@@ -1337,7 +1342,7 @@ ethereumjs-util@^5.0.0, ethereumjs-util@^5.0.1, ethereumjs-util@~5.1.0:
     rlp "^2.0.0"
     secp256k1 "^3.0.1"
 
-ethereumjs-vm@^2.0.2, ethereumjs-vm@~2.0.1:
+ethereumjs-vm@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/ethereumjs-vm/-/ethereumjs-vm-2.0.2.tgz#84e2372a5715a80a62f7f2a312f8c64537e8a842"
   dependencies:
@@ -1347,6 +1352,20 @@ ethereumjs-vm@^2.0.2, ethereumjs-vm@~2.0.1:
     ethereumjs-account "^2.0.3"
     ethereumjs-block "^1.2.2"
     ethereumjs-util "^4.0.1"
+    fake-merkle-patricia-tree "^1.0.1"
+    functional-red-black-tree "^1.0.1"
+    merkle-patricia-tree "^2.1.2"
+
+ethereumjs-vm@~2.2.0:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/ethereumjs-vm/-/ethereumjs-vm-2.2.1.tgz#183406cc40e4d9f4248e7e047dea7c191beab3a1"
+  dependencies:
+    async "^2.1.2"
+    async-eventemitter "^0.2.2"
+    ethereum-common "0.1.0"
+    ethereumjs-account "^2.0.3"
+    ethereumjs-block "^1.2.2"
+    ethereumjs-util "4.5.0"
     fake-merkle-patricia-tree "^1.0.1"
     functional-red-black-tree "^1.0.1"
     merkle-patricia-tree "^2.1.2"
@@ -1526,19 +1545,19 @@ functional-red-black-tree@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
 
-ganache-core@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/ganache-core/-/ganache-core-1.0.1.tgz#fcc0beab7945b72e0343ed58136a748743445ff3"
+"ganache-core@git://github.com/perissology/ganache-core.git":
+  version "1.1.3"
+  resolved "git://github.com/perissology/ganache-core.git#b4b4444759ab039c288512b6ae61974d0ff0dae8"
   dependencies:
     async "~1.5.0"
-    bip39 "~2.2.0"
+    bip39 "~2.4.0"
     cachedown "^1.0.0"
     chai "^3.5.0"
     ethereumjs-account "~2.0.4"
     ethereumjs-block "~1.2.2"
     ethereumjs-tx "^1.3.0"
     ethereumjs-util "~5.1.0"
-    ethereumjs-vm "~2.0.1"
+    ethereumjs-vm "~2.2.0"
     ethereumjs-wallet "~0.6.0"
     fake-merkle-patricia-tree "~1.0.1"
     heap "~0.2.6"
@@ -1555,9 +1574,10 @@ ganache-core@1.0.1:
     solc "0.4.8"
     temp "^0.8.3"
     tmp "0.0.31"
-    web3 "^0.18.2"
+    web3 "^0.19.1"
     web3-provider-engine "~8.1.0"
     webpack "^2.2.1"
+    websocket "^1.0.24"
     yargs "^7.0.2"
 
 gauge@~2.7.3:
@@ -1944,7 +1964,7 @@ is-symbol@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/is-symbol/-/is-symbol-1.0.1.tgz#3cc59f00025194b6ab2e38dbae6689256b660572"
 
-is-typedarray@~1.0.0:
+is-typedarray@^1.0.0, is-typedarray@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-typedarray/-/is-typedarray-1.0.0.tgz#e479c80858df0c1b11ddda6940f96011fcda4a9a"
 
@@ -2405,6 +2425,10 @@ nan@^2.0.5, nan@^2.0.8, nan@^2.2.1, nan@^2.3.0:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.6.2.tgz#e4ff34e6c95fdfb5aecc08de6596f43605a7db45"
 
+nan@^2.3.3:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/nan/-/nan-2.7.0.tgz#d95bf721ec877e08db276ed3fc6eb78f9083ad46"
+
 node-abi@^2.0.0:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/node-abi/-/node-abi-2.0.3.tgz#0ca67e5e667b8e1343549ca17153a815d0bbfdaa"
@@ -2621,9 +2645,19 @@ path-type@^1.0.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
-pbkdf2@^3.0.0, pbkdf2@^3.0.3:
+pbkdf2@^3.0.3:
   version "3.0.12"
   resolved "https://registry.yarnpkg.com/pbkdf2/-/pbkdf2-3.0.12.tgz#be36785c5067ea48d806ff923288c5f750b6b8a2"
+  dependencies:
+    create-hash "^1.1.2"
+    create-hmac "^1.1.4"
+    ripemd160 "^2.0.1"
+    safe-buffer "^5.0.1"
+    sha.js "^2.4.8"
+
+pbkdf2@^3.0.9:
+  version "3.0.13"
+  resolved "https://registry.yarnpkg.com/pbkdf2/-/pbkdf2-3.0.13.tgz#c37d295531e786b1da3e3eadc840426accb0ae25"
   dependencies:
     create-hash "^1.1.2"
     create-hmac "^1.1.4"
@@ -3380,6 +3414,12 @@ type-detect@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/type-detect/-/type-detect-1.0.0.tgz#762217cc06db258ec48908a1298e8b95121e8ea2"
 
+typedarray-to-buffer@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/typedarray-to-buffer/-/typedarray-to-buffer-3.1.2.tgz#1017b32d984ff556eba100f501589aba1ace2e04"
+  dependencies:
+    is-typedarray "^1.0.0"
+
 typewise-core@^1.2, typewise-core@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/typewise-core/-/typewise-core-1.2.0.tgz#97eb91805c7f55d2f941748fa50d315d991ef195"
@@ -3515,11 +3555,11 @@ web3@^0.16.0:
     utf8 "^2.1.1"
     xmlhttprequest "*"
 
-web3@^0.18.2:
-  version "0.18.4"
-  resolved "https://registry.yarnpkg.com/web3/-/web3-0.18.4.tgz#81ec1784145491f2eaa8955b31c06049e07c5e7d"
+web3@^0.19.1:
+  version "0.19.1"
+  resolved "https://registry.yarnpkg.com/web3/-/web3-0.19.1.tgz#e763d5b1107c4bc24abd4f8cbee1ba3659e6eb31"
   dependencies:
-    bignumber.js "git+https://github.com/debris/bignumber.js.git#94d7146671b9719e00a09c29b01a691bc85048c2"
+    bignumber.js "^4.0.2"
     crypto-js "^3.1.4"
     utf8 "^2.1.1"
     xhr2 "*"
@@ -3592,6 +3632,15 @@ webpack@^3.0.0:
     webpack-sources "^1.0.1"
     yargs "^6.0.0"
 
+websocket@^1.0.24:
+  version "1.0.24"
+  resolved "https://registry.yarnpkg.com/websocket/-/websocket-1.0.24.tgz#74903e75f2545b6b2e1de1425bc1c905917a1890"
+  dependencies:
+    debug "^2.2.0"
+    nan "^2.3.3"
+    typedarray-to-buffer "^3.1.2"
+    yaeti "^0.0.6"
+
 whatwg-fetch@>=0.10.0:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.3.tgz#9c84ec2dcf68187ff00bc64e1274b442176e1c84"
@@ -3663,6 +3712,10 @@ xtend@~3.0.0:
 y18n@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.1.tgz#6d15fba884c08679c0d77e88e7759e811e07fa41"
+
+yaeti@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/yaeti/-/yaeti-0.0.6.tgz#f26f484d72684cf42bedfb76970aa1608fbf9577"
 
 yargs-parser@^2.4.1:
   version "2.4.1"
